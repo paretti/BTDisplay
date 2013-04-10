@@ -38,14 +38,14 @@ char tempString[10];  // Will be used with sprintf to create strings
 
 void setup()
 {
-  //SPI.setDataMode(SPI_MODE0);
-  //SPI.setBitOrder(LSBFIRST);
-  //SPI.setClockDivider(SPI_CLOCK_DIV16);
-//  SPI.begin();
+  SPI.setDataMode(SPI_MODE0);
+  SPI.setBitOrder(LSBFIRST);
+  SPI.setClockDivider(SPI_CLOCK_DIV16);
+  SPI.begin();
   
 //ble_begin();
 
-  Serial.begin(57600);
+  Serial.begin(9600);
 //  
   // Must begin s7s software serial at the correct baud rate.
   //  The default of the s7s is 9600.
