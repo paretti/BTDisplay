@@ -42,22 +42,23 @@ void loop()
   // If data is ready
   while (Serial.available())
   {    
-    delay(10);
+    //delay(10);
     
     // read out command and data
     byte data0 = Serial.read();
     byte data1 = Serial.read();
-    byte data2 = Serial.read();
+    //byte data2 = Serial.read();
     
     if (data0 == 0x01)  // Command is to control digital out pin
     {
       if (data1 == 0x01) {
        cycles++;
-      }
-       
-        //digitalWrite(DIGITAL_OUT_PIN, HIGH);
-      //else
-        //digitalWrite(DIGITAL_OUT_PIN, LOW);
+       //Serial.println(data0);
+//      digitalWrite(DIGITAL_OUT_PIN, HIGH);
+//      else
+//        digitalWrite(DIGITAL_OUT_PIN, LOW);
+        
     }
   }  
+}
 }
